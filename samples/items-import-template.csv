@@ -1,0 +1,7 @@
+name,category,unit_price,currency,barcode,description,tax_rate
+USB Optical Mouse,Computer Accessories,650,KES,200001,Wired USB mouse,0.16
+Wireless Keyboard,Computer Accessories,1200,KES,200002,2.4GHz wireless keyboard,0.16
+HDMI Cable 1.5m,Computer Accessories,500,KES,200003,High speed HDMI,0.16
+Phone Screen Guard,Phone Accessories,250,KES,200004,Tempered glass 9H,0.16
+Laptop Cleaning Service,Services,700,KES,,Deep cleaning + thermal paste,0
+USB-C Fast Charger 25W,Phone Accessories,1450,KES,100006,PRICE UPDATE example: same barcode as seeded item -> price is updated not duplicated,0
