@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lipa na M-Pesa Shop</string>
+    <string name="app_tagline">Malipo ya STK Push kwa duka lako</string>
+
+    <!-- Login -->
+    <string name="server_url">Anwani ya seva</string>
+    <string name="username">Jina la mtumiaji</string>
+    <string name="password">Nenosiri</string>
+    <string name="login">INGIA</string>
+    <string name="demo_hint">Akaunti za majaribio: admin/admin123 au cashier/cashier123</string>
+    <string name="logging_in">Inaingia…</string>
+    <string name="invalid_login">Kuingia kumeshindikana — kagua jina/nenosiri</string>
+    <string name="searching_server">🔎 Inatafuta seva ya duka kwenye mtandao huu…</string>
+    <string name="server_found">✅ Seva imepatikana: %1$s</string>
+    <string name="server_not_found">Seva haijapatikana moja kwa moja — andika anwani au gusa Soma QR</string>
+    <string name="detect">TAFUTA</string>
+    <string name="scan_qr">SOMA QR YA SEKA</string>
+    <string name="scan_prompt_qr">Elekeza kwenye msimbo unaonekana kwenye skrini ya seva / ukurasa wa install</string>
+    <string name="invalid_qr">QR hiyo si ya seva ya duka</string>
+
+    <!-- Cashier -->
+    <string name="select_item">Chagua bidhaa / huduma</string>
+    <string name="quantity">Idadi</string>
+    <string name="unit_price_fmt">Bei ya kimoja: %1$s</string>
+    <string name="total_amount">JUMLA INAYODAIWA</string>
+    <string name="customer_phone">Namba ya simu ya mteja (07XXXXXXXX)</string>
+    <string name="prompt_payment">TUMA OMBI LA MALIPO</string>
+    <string name="add_to_cart">WEKA KWENYE MKOKOTENI</string>
+    <string name="added_to_cart">%1$s imewekwa</string>
+    <string name="cart_empty">Weka angalau bidhaa moja kwenye mkokoteni</string>
+    <string name="remove_line">Ondoa %1$s?</string>
+    <string name="tap_line_to_remove">Gusa mstari wa mkokoteni kuuondoa</string>
+    <string name="offline_catalog">Orodha ya nje ya mtandao — seva haipatikani, tunatumia orodha iliyohifadhiwa</string>
+    <string name="sending">Inatuma ombi la M-Pesa…</string>
+    <string name="waiting_customer">Ombi limetumwa — subiri mteja aweke PIN yake ya M-Pesa…</string>
+    <string name="payment_success">✔ Malipo yamepokelewa</string>
+    <string name="payment_failed">✖ Malipo yameshindikana / yameghairiwa</string>
+    <string name="receipt_fmt">Risiti ya M-Pesa: %1$s</string>
+    <string name="share_receipt">SHIRIKISHA</string>
+    <string name="share_via">Shirikisha risiti kupitia…</string>
+    <string name="tax">Kodi</string>
+    <string name="new_sale">MAUZO MAPYA</string>
+    <string name="pick_item_first">Tafadhali chagua bidhaa kwanza</string>
+    <string name="enter_phone">Tafadhali weka namba ya simu ya mteja</string>
+
+    <!-- Menu -->
+    <string name="scan_barcode">Soma msimbomstari</string>
+    <string name="language">Lugha</string>
+    <string name="currency">Sarafu</string>
+    <string name="transactions">Miamala</string>
+    <string name="logout">Toka</string>
+
+    <!-- Admin -->
+    <string name="add_item">Ongeza bidhaa</string>
+    <string name="edit_item">Hariri bidhaa</string>
+    <string name="import_file">Leta CSV / Excel</string>
+    <string name="add_user">Ongeza mtumiaji</string>
+    <string name="save">Hifadhi</string>
+    <string name="cancel">Ghairi</string>
+    <string name="item_name">Jina la bidhaa / huduma</string>
+    <string name="category">Kategoria</string>
+    <string name="barcode">Msimbomstari</string>
+    <string name="price">Bei</string>
+    <string name="tax_hint">Kiwango cha kodi (mf. 0.16 kwa 16% VAT)</string>
+    <string name="description_hint">Maelezo (si lazima)</string>
+    <string name="import_done">Uingizaji: %1$d wapya, %2$d wamesasishwa, %3$d wamerukwa</string>
+    <string name="role">Jukumu</string>
+    <string name="role_cashier">Karani wa mauzo</string>
+    <string name="role_admin">Msimamizi</string>
+    <string name="user_created">Mtumiaji "%1$s" ameundwa</string>
+    <string name="mpesa_settings">Mipangilio ya M-Pesa / Daraja</string>
+    <string name="business_type">Aina ya biashara</string>
+    <string name="biz_paybill">M-Pesa Paybill</string>
+    <string name="biz_till">Till ya Buy Goods</string>
+    <string name="biz_till_store">Till ya Buy Goods — yenye maduka (HQ)</string>
+    <string name="till_paybill_number">Namba ya Till / Paybill</string>
+    <string name="store_number">Namba ya duka (store)</string>
+    <string name="operator_name">Jina la operator (si lazima, kwa risiti)</string>
+    <string name="account_reference">Kumbukumbu ya akaunti (paybill)</string>
+    <string name="daraja_keys_title">Funguo za Daraja (developer.safaricom.co.ke)</string>
+    <string name="consumer_key">Consumer key</string>
+    <string name="consumer_secret">Consumer secret</string>
+    <string name="passkey">Passkey ya Lipa na M-Pesa</string>
+    <string name="environment">Mazingira</string>
+    <string name="env_sandbox">Sandbox (majaribio)</string>
+    <string name="env_production">Production (halisi)</string>
+    <string name="activate_live">Washa malipo halisi (acha demo)</string>
+    <string name="callback_hint">Weka URL hii ya callback kwenye Daraja portal: %1$s</string>
+    <string name="settings_saved">Mipangilio imehifadhiwa</string>
+
+    <!-- Transactions -->
+    <string name="refresh">Onyesha upya</string>
+    <string name="today_summary">Leo: mauzo %1$d · %2$s yamekusanywa · %3$d yanasubiri</string>
+
+    <!-- Generic -->
+    <string name="network_error">Hitilafu ya mtandao — kagua anwani ya seva</string>
+    <string name="scan_prompt">Elekeza kamera kwenye msimbomstari wa bidhaa</string>
+    <string name="no_item_barcode">Hakuna bidhaa yenye msimbomstari %1$s</string>
+    <string name="camera_denied">Ruhusa ya kamera inahitajika kusoma misimbomstari</string>
+</resources>
