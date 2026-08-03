@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  DEVELOPMENT setting: allows plain HTTP so the app can reach your local backend
-  (e.g. http://192.168.x.x:3000 or http://10.0.2.2:3000).
-  For production, put the backend behind HTTPS and set cleartextTrafficPermitted="false".
--->
-<network-security-config>
-    <base-config cleartextTrafficPermitted="true" />
-</network-security-config>
