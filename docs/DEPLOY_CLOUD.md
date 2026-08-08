@@ -16,16 +16,31 @@ only setup any phone needs is *open a link and install the app*.
 
 1. Push this repo to GitHub.
 2. Render dashboard → **New → Blueprint** → select the repo. Render reads `render.yaml`
-   and creates the web service (Node 20, auto-generated `JWT_SECRET`, 1 GB persistent disk
-   mounted at `/var/data`, health check on `/health`).
+   and creates the web service (Node 20, auto-generated `JWT_SECRET`, health check on `/health`).
 3. Wait ~2 minutes. You get a URL like `https://lipa-na-mpesa-shop.onrender.com`.
    Render exports it as `RENDER_EXTERNAL_URL`, which the app picks up automatically —
-   **no config needed**. (Custom domain later? Set `PUBLIC_URL` to it in the dashboard.)
+   **no config needed**. (Custom domain later? Set `PUBLIC_URL` in the dashboard.)
 4. Verify: open `https://<your-url>/health` → `{"ok":true}`.
 
-> Free tier note: Render's free web service has **ephemeral disk** (data lost on redeploy)
-> and sleeps when idle. The blueprint uses `starter` (~$7/mo) because the persistent disk is
-> what keeps shops' data alive. SQLite on a disk comfortably serves dozens of shops.
+### "Payment Information Required"? — plan choice matters
+
+The blueprint defaults to **`plan: free`** (testing) — no card at all. If Render asks for
+payment details, the blueprint is declaring **paid resources** (`plan: starter` and/or a
+persistent `disk`). You have two clean paths:
+
+| | FREE (default) | STARTER (production) |
+|---|---|---|
+| Card required | ❌ No | ✅ Yes (~$7/mo + disk) |
+| Sleeps when idle | Yes (~15 min; first hit after is slow, ~30–60 s) | No |
+| Database | **Ephemeral** — SQLite resets on redeploy/restart; shops/catalogs/sales vanish. Fine for demos | **Persistent disk** (`/var/data`) — data survives |
+| Use for | Testing, demos to shop owners | Live money, real shops |
+
+To upgrade later: edit `render.yaml`, swap in the commented **PRODUCTION** block, commit
+and push — Render will ask for the card *then*, which is expected.
+
+**Manual fallback (no Blueprint):** Dashboard → **New → Web Service** → connect repo →
+Runtime: Node · Build: `cd backend && npm ci` · Start: `cd backend && node src/index.js` ·
+Instance Type: **Free** → Create. Add env var `NODE_VERSION=20`. Same result, no card.
 
 ## Onboard the first shop (2 minutes, no terminal)
 

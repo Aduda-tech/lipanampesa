@@ -88,6 +88,13 @@
     <string name="activate_live">Activate real payments (leave demo mode)</string>
     <string name="callback_hint">Paste this callback URL in the Daraja portal: %1$s</string>
     <string name="settings_saved">Settings saved</string>
+    <string name="kiosk_mode">Kiosk mode (no server)</string>
+    <string name="use_kiosk_mode">NO SERVER? USE SINGLE-DEVICE KIOSK MODE</string>
+    <string name="kiosk_notice">SERVER-FREE MODE — this device calls Safaricom directly; keys, catalog and sales log live on this device only.</string>
+    <string name="kiosk_no_keys">Set your M-Pesa till/paybill keys first (M-Pesa settings)</string>
+    <string name="kiosk_waiting_query">Prompt sent — confirming with Safaricom…</string>
+    <string name="kiosk_receipt_note">Confirmed by Daraja STK query. Note: kiosk mode cannot fetch the M-Pesa receipt number (needs a callback server) — use M-Pesa messages for the code.</string>
+    <string name="kiosk_timeout_check">No response yet — check the phone (prompt may have expired) or M-Pesa messages.</string>
 
     <!-- Transactions -->
     <string name="refresh">Refresh</string>

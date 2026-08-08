@@ -16,6 +16,11 @@ An Android app + cloud backend that lets **any shop** prompt customers to pay by
 
 ## ✨ Features
 
+**v2.2.0 highlights**
+
+- **📴 KIOSK MODE — completely server-free** — a login-screen choice: run *without any backend at all*. The device calls Safaricom directly (keys stored on-device only), catalog + sales log live on the device, payment confirmed via STK Query polling. Zero hosting, zero Render, zero setup beyond entering your Daraja keys once. Trade-offs documented honestly (single device, no remote admin, and M-Pesa receipt numbers remain a platform-mode feature — Safaricom only delivers them to a callback URL): **`docs/KIOSK_MODE.md`**
+- Two modes, one APK: **platform mode** (multi-shop SaaS, auto receipt capture, remote admin) ↔ **kiosk mode** (offline backend-free till)
+
 **v2.1.0 highlights**
 
 - **🧾 One-form Daraja setup** — a shop admin enters plain-English till details (**business type, till/paybill number, store number, operator name, account ref**) + their portal keys once in the app (Admin → *M-Pesa / Daraja settings*). The server **auto-derives everything else**: STK transaction type (`CustomerPayBillOnline` vs `CustomerBuyGoodsOnline`), PartyB (incl. **store number** for HQ/store till networks), password generation and the callback URL to paste. Validated before a shop can leave demo mode; secrets are masked & never clobbered — see `docs/DARAJA_FOR_SHOPS.md`

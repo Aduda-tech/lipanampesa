@@ -88,6 +88,13 @@
     <string name="activate_live">Washa malipo halisi (acha demo)</string>
     <string name="callback_hint">Weka URL hii ya callback kwenye Daraja portal: %1$s</string>
     <string name="settings_saved">Mipangilio imehifadhiwa</string>
+    <string name="kiosk_mode">Hali ya kioski (bila seva)</string>
+    <string name="use_kiosk_mode">HAKUNA SEVA? TUMIA HALI YA KIOSKI (SIMU MOJA)</string>
+    <string name="kiosk_notice">HALI BILA SEVA — simu hii inapiga Safaricom moja kwa moja; funguo, orodha na rekodi zipo kwenye simu hii pekee.</string>
+    <string name="kiosk_no_keys">Weka funguo za till/paybill kwanza (Mipangilio ya M-Pesa)</string>
+    <string name="kiosk_waiting_query">Ombi limetumwa — tunathibitisha na Safaricom…</string>
+    <string name="kiosk_receipt_note">Imethibitishwa na Daraja. Kumbuka: hali ya kioski haiwezi kupata namba ya risiti ya M-Pesa (inahitaji seva ya callback) — tumia ujumbe wa M-Pesa.</string>
+    <string name="kiosk_timeout_check">Hakuna jibu bado — kagua simu (ombi linaweza kuwa limekwisha) au ujumbe wa M-Pesa.</string>
 
     <!-- Transactions -->
     <string name="refresh">Onyesha upya</string>

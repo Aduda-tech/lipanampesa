@@ -59,6 +59,9 @@ class LoginActivity : AppCompatActivity() {
         findViewById<MaterialButton>(R.id.btnScanQr).setOnClickListener {
             cameraPermission.launch(Manifest.permission.CAMERA)
         }
+        findViewById<MaterialButton>(R.id.btnKiosk).setOnClickListener {
+            startActivity(Intent(this, KioskActivity::class.java))
+        }
 
         btnLogin.setOnClickListener {
             val username = etUser.text.toString().trim()

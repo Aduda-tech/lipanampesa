@@ -1,10 +1,14 @@
-# Render blueprint — one-click deploy of the multi-shop backend.
-# Dashboard: New → Blueprint → point at this repo. Render reads this file.
+# ─────────────────────────────────────────────────────────────────────────────
+# Render blueprint — deploy of the multi-shop Lipa na M-Pesa backend.
+#
+# DEFAULT = FREE TESTING DEPLOY (no card required).
+# Production upgrade (SQLite survives restarts): see the commented block below.
+# ─────────────────────────────────────────────────────────────────────────────
 services:
   - type: web
     name: lipa-na-mpesa-shop
     runtime: node
-    plan: starter            # persistent disk requires a paid plan; see docs/DEPLOY_CLOUD.md
+    plan: free                 # <-- free testing tier, no payment info needed
     buildCommand: cd backend && npm ci
     startCommand: cd backend && node src/index.js
     healthCheckPath: /health
@@ -12,15 +16,39 @@ services:
       - key: NODE_VERSION
         value: "20"
       - key: JWT_SECRET
-        generateValue: true   # Render generates a strong random secret
+        generateValue: true    # Render generates a strong random secret
       - key: DARAJA_MOCK
-        value: "true"         # platform fallback: shops start in demo mode anyway
-      - key: DB_FILE
-        value: /var/data/shop.db
-    disk:
-      name: shopdata
-      mountPath: /var/data
-      sizeGB: 1
+        value: "true"          # platform fallback: all shops start in demo mode
 
-# PUBLIC_URL is filled in automatically by Render via RENDER_EXTERNAL_URL —
-# the app reads it in backend/src/config.js. No action needed.
+# PUBLIC_URL is filled in automatically by Render via RENDER_EXTERNAL_URL.
+
+# ═════════════════════════════════════════════════════════════════════════
+#  PRODUCTION UPGRADE (when testing is done):
+#  Replace "plan: free" with the block below, commit & push.
+#  Render WILL ask for payment details for this — that is expected,
+#  because the Starter plan and persistent disks are paid features.
+#
+#    plan: starter
+#    buildCommand: cd backend && npm ci
+#    startCommand: cd backend && node src/index.js
+#    healthCheckPath: /health
+#    envVars:
+#      - key: NODE_VERSION
+#        value: "20"
+#      - key: JWT_SECRET
+#        generateValue: true
+#      - key: DARAJA_MOCK
+#        value: "true"
+#      - key: DB_FILE
+#        value: /var/data/shop.db
+#    disk:
+#      name: shopdata
+#      mountPath: /var/data
+#      sizeGB: 1
+#
+#  FREE TIER NOTES (acceptable for demos, NOT for real shops):
+#   • Service sleeps after ~15 min idle — first request after sleep takes 30–60s
+#     (the cashier just sees a slow first login, then it's normal).
+#   • Ephemeral filesystem — the SQLite database is wiped on redeploy/restart,
+#     so shops/catalogs/transactions reset. Fine for testing.
+# ═════════════════════════════════════════════════════════════════════════

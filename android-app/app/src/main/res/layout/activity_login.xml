@@ -122,6 +122,15 @@
             android:layout_marginTop="12dp"
             android:textColor="@color/status_failed" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnKiosk"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="12sp"
+            android:text="@string/use_kiosk_mode" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

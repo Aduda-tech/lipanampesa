@@ -39,6 +39,7 @@
         <activity android:name=".CashierActivity" android:exported="false" />
         <activity android:name=".AdminActivity" android:exported="false" />
         <activity android:name=".TransactionsActivity" android:exported="false" />
+        <activity android:name=".KioskActivity" android:exported="false" />
 
         <!-- Persist per-app language (English / Kiswahili) across restarts -->
         <service
